@@ -1,0 +1,28 @@
+/* AYCAS Studios — brand tokens v2.1 · 2026-08-10
+   Source of truth: the approved Core Mark document (AYCAS Core Mark.html)
+   and brand/core-mark-*.svg. Products import this file — never copy hexes. */
+:root{
+  /* Grounds — light-first. White is the house ground; ink is the stage for cinematic pieces. */
+  --white:#FFFFFF;       /* primary ground. Documents, site, UI. */
+  --ink:#12201D;         /* text, and the full dark ground for films/covers' serious counterpart. Never pure black. */
+  /* The teal ladder — the only hue the house owns. */
+  --teal:#3E9A8F;        /* THE brand teal. Mark ground, avatar, fills, large display on white (3.1:1 — large only). */
+  --teal-deep:#2F766D;   /* working teal on white — links, eyebrows, rules, body-adjacent accents (4.9:1). The print teal. */
+  --teal-bright:#45C7B3; /* teal on ink — links, wordmark accent, hub on dark. Never on white. */
+  /* Ink alphas — structure. */
+  --ink-70:rgba(18,32,29,.70);  /* body copy secondary */
+  --ink-55:rgba(18,32,29,.55);  /* captions, metadata — never body */
+  --ink-40:rgba(18,32,29,.40);
+  --ink-14:rgba(18,32,29,.14);  /* hairlines */
+  --ink-08:rgba(18,32,29,.08);
+  /* Caution accent — don't-cards, construction guides only. Never brand colour. */
+  --rust:#9A3B1F;
+  /* Type. Inter carries everything; Space Grotesk is the accent/mono. */
+  --font-body:'Inter',system-ui,sans-serif;          /* 400–800; display 800, tracking -.02 to -.03em */
+  --font-mono:'Space Grotesk',monospace;             /* codes, figures, ledgers — tabular-nums, .02em */
+  --tk:.16em;                                        /* eyebrow tracking, 700 UPPERCASE */
+}
+/* Print: white paper, ink text, teal-deep as the working teal. The mark keeps --teal. */
+/* RETIRED — recognise, never match:
+   v1 pine system: #1B544E pine, #9A3B1F rust-as-brand, #6FE3BC spark, Space-Grotesk-only.
+   Unapproved draft (2026-08-10 a.m.): #0A0B0A/#1d5c57 dark-first, Zalando Sans / DM Sans / Bitcount. */
