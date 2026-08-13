@@ -1,0 +1,208 @@
+/* AYCAS Studios — canonical token list.
+   GENERATED from the design system project (tokens/colors.css, typography.css, spacing.css,
+   effects.css). Do not hand-edit here: edit the design system and regenerate, or the two drift.
+   Generated 2026-08-10. Element defaults (tokens/base.css) are deliberately excluded. */
+
+/* Inter carries everything; Space Grotesk is the accent/mono. No third face.
+   Served from Google Fonts — the brand sources reference these families by name only,
+   no binaries were supplied. Weights per brand book section 06. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* ─── from tokens/colors.css ─── */
+/* AYCAS Studios — colour. One hue, held tightly.
+   Roles are normative: a hex without its role is not the brand. */
+:root{
+  /* Grounds — light-first. White is the house ground; ink is the stage for cinematic pieces. */
+  --white:#FFFFFF;
+  --ink:#12201D;
+
+  /* The teal ladder — the only hue the house owns. */
+  --teal:#3E9A8F;        /* brand teal. Mark ground, avatar, fills, covers. On white: large text only (3.1:1) */
+  --teal-deep:#2F766D;   /* working teal on white — links, eyebrows, rules, codes (4.9:1). The print teal */
+  --teal-bright:#45C7B3; /* teal on ink — links, wordmark accent, hub on dark. Never on white */
+
+  /* Ink alphas — structure. */
+  --ink-72:rgba(18,32,29,.72);  /* document body secondary (aycas-legal) */
+  --ink-70:rgba(18,32,29,.70);  /* body copy secondary (web) */
+  --ink-60:rgba(18,32,29,.60);
+  --ink-55:rgba(18,32,29,.55);  /* captions, metadata — never body copy */
+  --ink-45:rgba(18,32,29,.45);
+  --ink-40:rgba(18,32,29,.40);  /* disabled */
+  --ink-16:rgba(18,32,29,.16);
+  --ink-14:rgba(18,32,29,.14);  /* hairlines */
+  --ink-08:rgba(18,32,29,.08);
+  --teal-08:rgba(62,154,143,.07); /* the one teal wash — callouts, party blocks */
+
+  /* Caution accent — don't-cards, construction guides, error states. Never a brand colour. */
+  --rust:#9A3B1F;
+  --rust-12:rgba(154,59,31,.12);
+  --rust-06:rgba(154,59,31,.06);
+
+  /* Semantic aliases */
+  --surface-page:var(--white);
+  --surface-stage-ink:var(--ink);      /* cinematic pieces, film end-cards */
+  --surface-stage-teal:var(--teal);    /* mark surfaces, designed covers, app tile */
+  --surface-wash:var(--teal-08);
+  --surface-specimen:#F6F7F7;          /* the neutral box behind mark specimens */
+
+  --text-body:var(--ink);
+  --text-body-secondary:var(--ink-70);
+  --text-meta:var(--ink-55);
+  --text-disabled:var(--ink-40);
+  --text-on-ink:var(--white);
+  --text-on-teal:var(--white);
+  --text-accent:var(--teal-deep);
+  --text-accent-on-ink:var(--teal-bright);
+  --text-link:var(--teal-deep);
+  --text-link-hover:var(--ink);
+  --text-caution:var(--rust);
+
+  --border-hairline:var(--ink-14);
+  --border-hairline-soft:var(--ink-08);
+  --border-rule-ink:var(--ink);
+  --border-rule-teal:var(--teal);
+
+  --focus-ring:var(--teal-deep);
+  --focus-ring-on-ink:var(--teal-bright);
+}
+
+/* Ink stage — apply to a cinematic section to flip the roles. */
+[data-ground="ink"]{
+  --surface-page:var(--ink);
+  --text-body:var(--white);
+  --text-body-secondary:rgba(255,255,255,.72);
+  --text-meta:rgba(255,255,255,.55);
+  --text-accent:var(--teal-bright);
+  --text-link:var(--teal-bright);
+  --text-link-hover:var(--white);
+  --border-hairline:rgba(255,255,255,.16);
+  --focus-ring:var(--teal-bright);
+}
+
+/* Teal stage — the mark's own surfaces: avatar, app tile, designed covers. */
+[data-ground="teal"]{
+  --surface-page:var(--teal);
+  --text-body:var(--white);
+  --text-body-secondary:rgba(255,255,255,.90);
+  --text-meta:rgba(255,255,255,.72);
+  --text-accent:var(--white);
+  --text-link:var(--white);
+  --border-hairline:rgba(255,255,255,.28);
+  --focus-ring:var(--white);
+}
+
+/* ─── from tokens/typography.css ─── */
+/* AYCAS Studios — type. One face, one accent.
+   Display is Inter 800, tightly tracked. Eyebrows are 700 UPPERCASE at .16em.
+   Space Grotesk carries codes, file names, figures and ledger values only — never paragraphs. */
+:root{
+  --font-body:'Inter',system-ui,'Segoe UI',Arial,sans-serif; /* @kind font */
+  --font-mono:'Space Grotesk',ui-monospace,monospace; /* @kind font */
+
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+  --fw-display:800; /* @kind font */
+
+  /* tracking */
+  --tk:.16em; /* @kind font */            /* eyebrow — web */
+  --tk-doc:.2em; /* @kind font */         /* eyebrow — institutional documents (aycas-legal) */
+  --tk-table:.14em; /* @kind font */      /* table heads */
+  --tk-display:-.03em; /* @kind font */
+  --tk-title:-.025em; /* @kind font */
+  --tk-wordmark:-.02em; /* @kind font */
+  --tk-mono:.02em; /* @kind font */
+
+  /* screen scale — clamped values as shipped in the Core Mark document */
+  --fs-hero:clamp(38px,5.4vw,68px); /* @kind font */
+  --fs-h2:clamp(26px,3.4vw,40px); /* @kind font */
+  --fs-h3:30px; /* @kind font */
+  --fs-lede:clamp(15px,1.4vw,18px); /* @kind font */
+  --fs-body:16px; /* @kind font */
+  --fs-body-sm:14px; /* @kind font */
+  --fs-caption:13.5px; /* @kind font */
+  --fs-eyebrow:11px; /* @kind font */
+  --fs-eyebrow-lg:12px; /* @kind font */
+
+  --lh-display:.98; /* @kind font */
+  --lh-title:1.03; /* @kind font */
+  --lh-body:1.6; /* @kind font */
+  --lh-tight:1.45; /* @kind font */
+
+  /* print scale — aycas-legal.css, as shipped */
+  --fs-doc-body:10.5pt; /* @kind font */
+  --fs-doc-intro:11pt; /* @kind font */
+  --fs-doc-title:30px; /* @kind font */
+  --fs-doc-eyebrow:8.5pt; /* @kind font */
+  --fs-doc-table:9.6pt; /* @kind font */
+  --fs-doc-tablehead:7.8pt; /* @kind font */
+  --fs-doc-foot:7.6pt; /* @kind font */
+  --lh-doc:1.6; /* @kind font */
+
+  --measure-body:62ch; /* @kind other */
+  --measure-lede:58ch; /* @kind other */
+  --measure-doc:66ch; /* @kind other */
+}
+
+/* ─── from tokens/spacing.css ─── */
+/* AYCAS Studios — spacing and page geometry.
+   The brand sources ship no abstract spacing scale; these are the shipped values,
+   collected from aycas-legal.css and the Core Mark document. Use them, don't round them. */
+:root{
+  --sp-1:4px;
+  --sp-2:7px;
+  --sp-3:9px;
+  --sp-4:14px;
+  --sp-5:18px;
+  --sp-6:22px;
+  --sp-7:26px;
+  --sp-8:30px;
+  --sp-9:34px;
+  --sp-10:40px;
+
+  --gap-grid:20px;         /* colourway / lockup grids */
+  --gap-donts:14px;
+  --pad-card:14px 16px;
+  --pad-stage:40px 34px;
+
+  --sec-pad-block:clamp(42px,6vw,78px);
+  --cover-pad-block:clamp(44px,6vw,80px);
+  --wrap-max:1080px;
+  --wrap-pad-inline:max(24px,5vw);
+
+  /* documents — A4 portrait, as shipped */
+  --doc-size:a4;
+  --doc-margin:2cm 1.8cm 2.2cm 1.8cm;
+  --doc-rule-top:88px;     /* the teal title rule */
+  --doc-clause-gutter:2.4rem;
+}
+
+/* ─── from tokens/effects.css ─── */
+/* AYCAS Studios — borders, radii, motion.
+   Structure is drawn with hairlines, not boxes. No gradients. No shadows —
+   the one sanctioned exception is the drop-shadow on the hero/cover mark specimen. */
+:root{
+  --radius-card:6px;       /* the house radius: specimen cards, lockup cards, don't-cards */
+  --radius-tile:24px;      /* app tile only (core-tile-teal.svg, rx=24 at 100) */
+  --radius-bar:3px;        /* the wordmark bar */
+  --radius-pill:999px;
+
+  --hairline:1px solid var(--ink-14); /* @kind other */
+  --hairline-soft:1px solid var(--ink-08); /* @kind other */
+  --rule-ink:2px solid var(--ink); /* @kind other */        /* table head underline, footer rule */
+  --rule-ink-heavy:1.5px solid var(--ink); /* @kind other */
+  --rule-teal:1px solid var(--teal); /* @kind other */      /* document running header */
+  --accent-bar:3px solid var(--teal); /* @kind other */     /* callouts, party blocks */
+  --accent-bar-caution:3px solid var(--rust); /* @kind other */
+
+  --shadow-none:none;
+  --shadow-cover-mark:0 12px 28px rgba(18,32,29,.22); /* sanctioned exception, cover/hero mark only */
+
+  /* No ruled motion system exists yet (brand book section 16, open question 3).
+     Until it is ruled: state changes only, short and linear. The mark is never animated. */
+  --dur-state:120ms; /* @kind other */
+  --ease-state:linear; /* @kind other */
+  --focus-width:2px;
+  --focus-offset:2px;
+}
