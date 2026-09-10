@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AYCAS | ChurchOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;padding:0;width:1500px;height:1000px;overflow:hidden;background:#1B1A17;}
+.tile{position:relative;width:1500px;height:1000px;background:#1B1A17;color:#EDE9E0;overflow:hidden;font-family:'Space Grotesk',system-ui,sans-serif;}
+.spine-bar{position:absolute;left:105px;top:80px;bottom:80px;width:3px;background:#9A3B1F;}
+.wm{position:absolute;top:80px;left:185px;display:inline-flex;align-items:baseline;gap:14px;}
+.wm .a{font-size:32px;font-weight:600;letter-spacing:0.02em;color:#EDE9E0;}
+.wm .bar{width:3px;height:26px;background:#9A3B1F;align-self:center;}
+.wm .s{font-size:18px;font-weight:400;letter-spacing:0.22em;color:#EDE9E0;}
+.cat{position:absolute;top:88px;right:80px;font-size:17px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#EDE9E0;opacity:0.5;}
+.mid{position:absolute;left:185px;top:50%;transform:translateY(-52%);}
+.lock{margin:0;font-weight:600;line-height:0.9;letter-spacing:-0.03em;white-space:nowrap;font-size:130px;}
+.lock .lk-a{color:#EDE9E0;opacity:0.46;font-weight:500;}
+.lock .lk-bar{color:#9A3B1F;margin:0 0.16em;font-weight:400;}
+.lock .lk-p{color:#EDE9E0;}
+.tag{margin:34px 0 0;color:#EDE9E0;opacity:0.74;font-weight:400;font-size:36px;}
+.cta{position:absolute;left:185px;bottom:84px;font-size:26px;font-weight:500;letter-spacing:0.04em;color:#EDE9E0;opacity:0.85;}
+.cta .ar{color:#9A3B1F;margin-left:10px;}
+</style>
+</head>
+<body>
+<div class="tile">
+  <span class="spine-bar"></span>
+  <div class="wm"><span class="a">AYCAS</span><span class="bar"></span><span class="s">STUDIOS</span></div>
+  <div class="cat">Operating Systems</div>
+  <div class="mid">
+    <h1 class="lock"><span class="lk-a">AYCAS</span><span class="lk-bar">|</span><span class="lk-p">ChurchOS</span></h1>
+    <p class="tag">An operating system for churches.</p>
+  </div>
+  <div class="cta">aycas.studios/churchos<span class="ar">&rarr;</span></div>
+</div>
+</body>
+</html>
